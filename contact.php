@@ -133,30 +133,26 @@
   <section class="contact_section layout_padding-bottom">
     <div class="container">
       <div class="heading_container">
-        <h2>
-          Get In Touch
-        </h2>
+        <h2>Get In Touch</h2>
       </div>
       <div class="row">
         <div class="col-md-7">
           <div class="form_container">
-            <form action="">
+            <form action="submit_form.php" method="post">
               <div>
-                <input type="text" placeholder="Full Name" />
+                <input type="text" name="fullName" placeholder="Full Name" />
               </div>
               <div>
-                <input type="email" placeholder="Email" />
+                <input type="email" name="email" placeholder="Email" />
               </div>
               <div>
-                <input type="text" placeholder="Phone Number" />
+                <input type="text" name="phoneNumber" placeholder="Phone Number" />
               </div>
               <div>
-                <input type="text" class="message-box" placeholder="Message" />
+                <input type="text" name="message" class="message-box" placeholder="Message" />
               </div>
               <div class="btn_box">
-                <button>
-                  SEND
-                </button>
+                <button type="submit">SEND</button>
               </div>
             </form>
           </div>

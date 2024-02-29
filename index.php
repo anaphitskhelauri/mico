@@ -69,7 +69,7 @@
       <div class="header_bottom">
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container ">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index.php">
               <img src="images/logo.png" alt="">
             </a>
 
@@ -253,45 +253,46 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <form>
+          <form action="confirmation.php" method="POST">
+            <!-- add action and method origin code -->
             <h4>
               BOOK <span>APPOINTMENT</span>
             </h4>
             <div class="form-row ">
               <div class="form-group col-lg-4">
                 <label for="inputPatientName">Patient Name </label>
-                <input type="text" class="form-control" id="inputPatientName" placeholder="">
+                <input type="text" name="inputPatientName" class="form-control" id="inputPatientName" placeholder="">
               </div>
               <div class="form-group col-lg-4">
                 <label for="inputDoctorName">Doctor's Name</label>
-                <select name="" class="form-control wide" id="inputDoctorName">
-                  <option value="Normal distribution ">Normal distribution </option>
-                  <option value="Normal distribution ">Normal distribution </option>
-                  <option value="Normal distribution ">Normal distribution </option>
+                <select name="inputDoctorName" class="form-control wide" id="inputDoctorName">
+                  <option value="Doctor A">Doctor A</option>
+                  <option value="Doctor B">Doctor B</option>
+                  <option value="Doctor C">Doctor C</option>
                 </select>
               </div>
               <div class="form-group col-lg-4">
                 <label for="inputDepartmentName">Department's Name</label>
-                <select name="" class="form-control wide" id="inputDepartmentName">
-                  <option value="Normal distribution ">Normal distribution </option>
-                  <option value="Normal distribution ">Normal distribution </option>
-                  <option value="Normal distribution ">Normal distribution </option>
+                <select name="inputDepartmentName" class="form-control wide" id="inputDepartmentName">
+                  <option value="Department X">Department X</option>
+                  <option value="Department Y">Department Y</option>
+                  <option value="Department Z">Department Z</option>
                 </select>
               </div>
             </div>
             <div class="form-row ">
               <div class="form-group col-lg-4">
                 <label for="inputPhone">Phone Number</label>
-                <input type="number" class="form-control" id="inputPhone" placeholder="XXXXXXXXXX">
+                <input type="number" name="inputPhone" class="form-control" id="inputPhone" placeholder="XXXXXXXXXX">
               </div>
               <div class="form-group col-lg-4">
                 <label for="inputSymptoms">Symptoms</label>
-                <input type="text" class="form-control" id="inputSymptoms" placeholder="">
+                <input type="text" name="inputSymptoms" class="form-control" id="inputSymptoms" placeholder="">
               </div>
               <div class="form-group col-lg-4">
                 <label for="inputDate">Choose Date </label>
                 <div class="input-group date" id="inputDate" data-date-format="mm-dd-yyyy">
-                  <input type="text" class="form-control" readonly>
+                  <input type="text" name="inputDate" class="form-control" readonly>
                   <span class="input-group-addon date_icon">
                     <i class="fa fa-calendar" aria-hidden="true"></i>
                   </span>
@@ -306,6 +307,8 @@
       </div>
     </div>
   </section>
+
+
 
 
   <!-- end book section -->
@@ -623,33 +626,30 @@
   <!-- end client section -->
 
   <!-- contact section -->
+
   <section class="contact_section layout_padding-bottom">
     <div class="container">
       <div class="heading_container">
-        <h2>
-          Get In Touch
-        </h2>
+        <h2>Get In Touch</h2>
       </div>
       <div class="row">
         <div class="col-md-7">
           <div class="form_container">
-            <form action="">
+            <form action="submit_form.php" method="post">
               <div>
-                <input type="text" placeholder="Full Name" />
+                <input type="text" name="fullName" placeholder="Full Name" />
               </div>
               <div>
-                <input type="email" placeholder="Email" />
+                <input type="email" name="email" placeholder="Email" />
               </div>
               <div>
-                <input type="text" placeholder="Phone Number" />
+                <input type="text" name="phoneNumber" placeholder="Phone Number" />
               </div>
               <div>
-                <input type="text" class="message-box" placeholder="Message" />
+                <input type="text" name="message" class="message-box" placeholder="Message" />
               </div>
               <div class="btn_box">
-                <button>
-                  SEND
-                </button>
+                <button type="submit">SEND</button>
               </div>
             </form>
           </div>
