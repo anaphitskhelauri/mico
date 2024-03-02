@@ -1,3 +1,4 @@
+
 <!-- slider function -->
 <?php
 function generateSliderSection() {
