@@ -4,50 +4,75 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Form Submission Confirmation</title>
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- nice select -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha256-mLBIhmBvigTFWPSCtvdu6a76T+3Xyt+K571hupeFLg4=" crossorigin="anonymous" />
+  <!-- datepicker -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
   <style>
-    body {
-      background-image: url(images/t4.png);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 100px;
-    }
     .form-submit {
-        margin-top: 120px;
+        padding: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-
-    .form-submit h1{
-        background-color: #ffffff;
-        padding: 100px 30px;
-        border-radius: 50px;
+        gap: 200px;
         text-align: center;
+        animation: fadeInScale 1s ease-in-out forwards;
     }
 
-    .home-btn {
-
-      background-color: #252525;
-      color: #ffffff;
-      padding: 10px 45px;
-      border-radius: 5px;
-      margin-top: 10px;
-      text-transform: uppercase;
+    .form-submit img {
+        display: block;
+    
     }
 
-    .home-btn a {
-      text-decoration: none;  
-      color: #ffffff;
-      text-transform: uppercase;
+    /* animation */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
     }
+    100% {
+        opacity: 1;
+        transform: scale(0.8);
+    }
+}
+
   </style>
 </head>
+
+<div class="hero_area">
+    <!-- header section strats -->
+  <?php
+  include 'header.php';
+  ?>
+    <!-- end header section -->
 <body>
   <div class="form-submit">
     <h1>Your form is submitted.</h1>
+    <img src="images/contact-img.jpg" alt="">
   </div>
-  <button class="home-btn"><a href="./index.php">Home Page</a></button>
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="https://html.design/">Free Html Templates</a>
+      </p>
+    </div>
+  </footer>
 </body>
 </html>

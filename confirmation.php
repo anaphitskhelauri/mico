@@ -30,9 +30,9 @@
       background-color: #00c6a9;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      padding-top: 5px;
       align-items: center;
-      gap: 30px;
+      gap: 20px;
     }
 
     .conf-info h1 {
@@ -45,6 +45,7 @@
       padding: 10px 45px;
       border-radius: 5px;
       text-transform: uppercase;
+      margin-top: 10px;
     }
 
     .home-btn a {
@@ -110,7 +111,32 @@
       <p>Symptoms: <?php echo $_POST['inputSymptoms']; ?></p>
       <p>Chosen Date: <?php echo $_POST['inputDate']; ?></p>
     </div>
+    <button id="downloadButton">Download Info</button>
     <button class="home-btn"><a href="./index.php">Home Page</a></button>
   </div>
+
+  <script>
+  // Function to trigger download
+  function downloadInfo() {
+    // Get the content of the sub-info div
+    var content = document.querySelector('.sub-info').innerText;
+
+    // Create a Blob object containing the content
+    var blob = new Blob([content], { type: 'text/plain' });
+
+    // Create a download link
+    var downloadLink = document.createElement('a');
+    downloadLink.href = URL.createObjectURL(blob);
+
+    // Set the file name
+    downloadLink.download = 'patient_info.txt';
+
+    // Trigger the download
+    downloadLink.click();
+  }
+
+  // Add click event listener to the download button
+  document.getElementById('downloadButton').addEventListener('click', downloadInfo);
+</script>
 </body>
 </html>
